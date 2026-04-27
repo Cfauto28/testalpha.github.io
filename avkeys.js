@@ -93,7 +93,7 @@ function generateKey(){
         document.getElementById("key").innerHTML = "Errors occurred during key generation:<br> * invalid character in username";
     }
     else {
-        document.getElementById("key").innerHTML = "Success! Your key is: <br>" + key + "<br>Copied to clipboard.";
+        document.getElementById("key").innerHTML = "Success! Your key was: <br>" + key + "<br>Copied to clipboard.";
 				navigator.clipboard.writeText(key);
     }
 }

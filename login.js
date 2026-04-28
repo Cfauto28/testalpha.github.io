@@ -6,16 +6,17 @@ jslogin.className = "login";
 jslogin.innerHTML = "Please log in here with your Minecraft account to enable download links. (NPAPI or ActiveX must be supported)<br><br>";
 let loginsection = document.querySelector(".mwidthsection")
 loginsection.appendChild(jslogin);
+let jslogin2 = document.createElement('div');
+jslogin2.className = "login2";
+jslogin2.innerHTML = "Unable to use the Ext16WebApi.<br>Check if your browser supports NPAPI or ActiveX<br>Also try refreshing the page.";
+jslogin.appendChild(jslogin2)
 
 function loadlogin() {
     loadedlogin = true;
-    let jslogin2 = document.createElement('div');
-    jslogin2.className = "login2";
     fancymenu.placeholders.get('playername')
     .then(name => {
         jslogin2.innerHTML = "Connected to main servers.<br>Logged in as " + name + "<br>Using the Ext1605WebApi (NPAPI).<br>Download the launcher to start plaing."
-    }).catch(error => console.error(error));
-    jslogin.appendChild(jslogin2);
+    }).catch(error => console.error(error));;
 };
 
 window.addEventListener('fancymenu-ready', () => {

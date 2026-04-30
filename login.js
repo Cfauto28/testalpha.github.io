@@ -8,14 +8,14 @@ let loginsection = document.querySelector(".mwidthsection")
 loginsection.appendChild(jslogin);
 let jslogin2 = document.createElement('div');
 jslogin2.className = "login2";
-jslogin2.innerHTML = "Unable to use the Ext16WebApi.<br>Check if your browser supports NPAPI or ActiveX<br>Also try refreshing the page.";
+jslogin2.innerHTML = "Unable to initialize login prompt.<br>Check if your browser supports NPAPI or ActiveX<br>Also try refreshing the page.";
 jslogin.appendChild(jslogin2)
 
 function loadlogin() {
     loadedlogin = true;
     fancymenu.placeholders.get('playername')
     .then(name => {
-        jslogin2.innerHTML = "Connected to main servers.<br>Logged in as " + name + "<br>Using the Ext1605WebApi (NPAPI).<br>Download the launcher to start plaing."
+        jslogin2.innerHTML = "Connected to main servers.<br>Logged in as " + name + "<br>.Download the launcher to start plaing."
     }).catch(error => console.error(error));;
 };
 
@@ -25,19 +25,7 @@ window.addEventListener('fancymenu-ready', () => {
             loadlogin();
         };
 });
-//if (typeof fancymenu !== 'undefined') {
-/*else {
-    console.error("Unable to use the fancymenu API falling back...")
-    let jslogin2 = document.createElement('div');
-    let jslogin = document.createElement('div');
-    let parentElement = document.querySelector(".mwidthsection")
-    jslogin2.className = "login2";
-    jslogin.className = "login";
-    jslogin2.innerHTML = "Unable to use the Ext16WebApi.<br>Check if the server are online<br>Try refreshing the page.";
-    jslogin.innerHTML = "Please log in here with your Minecraft account to enable download links. (NPAPI or ActiveX support must be enabled)<br><br>"
-    parentElement.appendChild(jslogin);
-    jslogin.appendChild(jslogin2);
-}
+
 
 /*	<div class="login">
  Please log in here with your Minecraft account to enable download links. (JavaScript must be enabled)<br><br>

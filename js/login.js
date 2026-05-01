@@ -16,14 +16,3 @@ if (navigator.userAgent.includes("Trident")){
 }
 jslogin.appendChild(jslogin2)
 
-
-
-/*	<div class="login">
- Please log in here with your Minecraft account to enable download links. (JavaScript must be enabled)<br><br>
- <div class="login2">
- Unable use JavaScript login.<br>
- Check if JavaScript support is enabled in your browser.<br>
- Try refreshing the page.
- </div>
- </div>
-*/

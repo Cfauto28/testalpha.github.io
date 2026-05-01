@@ -3,12 +3,17 @@
 let loadedlogin = false
 let jslogin = document.createElement('div');
 jslogin.className = "login";
-jslogin.innerHTML = "Please log in here with your Minecraft account to enable download links. (NPAPI or ActiveX must be supported)<br><br>";
+jslogin.innerHTML = "Please log in here with your Minecraft account to enable download links.<br><br>";
 let loginsection = document.querySelector(".mwidthsection")
 loginsection.appendChild(jslogin);
 let jslogin2 = document.createElement('div');
 jslogin2.className = "login2";
-jslogin2.innerHTML = "Unable to initialize login prompt.<br>Check if your browser supports NPAPI or ActiveX<br>Also try refreshing the page.";
+
+if (navigator.userAgent.includes("Trident")){
+    jslogin2.innerHTML = "Unable to initialize the ActiveX control.<br>Check if the main servers are online<br>Also try refreshing the page."
+} else {
+  jslogin2.innerHTML = "Unable to initialize login prompt.<br>Check if your browser supports NPAPI <br>Also try refreshing the page.";
+}
 jslogin.appendChild(jslogin2)
 
 function loadlogin() {

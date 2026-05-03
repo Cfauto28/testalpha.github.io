@@ -5,7 +5,7 @@
 var jslogin = document.createElement('div');
 jslogin.className = "login";
 jslogin.innerHTML = "Please log in here with your Minecraft account to enable download links.<br><br>";
-document.querySelector(".mwidthsection").appendChild(jslogin);
+document.getElementById("loginspace").appendChild(jslogin);
 
 //Bottom Part
 

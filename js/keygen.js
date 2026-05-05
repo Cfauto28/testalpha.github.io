@@ -1,7 +1,7 @@
 // Here it is, the (mostly) original unobfuscated code.
 // This originally ran off PHP.
 
-let EndBytes = [39, 86, 26, 72, 13, 91, 23];
+var EndBytes = [39, 86, 26, 72, 13, 91, 23];
 
 function GenerateKeyForName(name){
     

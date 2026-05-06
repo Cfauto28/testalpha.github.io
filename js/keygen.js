@@ -10,13 +10,13 @@ function GenerateKeyForName(name){
     var nameRecalc = name;
     
     if (name.length >= 15){
-        console.log("Name too long");
+//        console.log("Name too long");
         return "#";
     }
     for (var i = 0; i < name.length; i++){
         var a = name.charAt(i);
         if ((a < 'A' || a > 'Z') && a != "_" && (a < '0' || a > '9')){
-            console.log("Invalid character, use only A to Z uppercase");
+//            console.log("Invalid character, use only A to Z uppercase");
             return "#";
         }
     }
@@ -29,7 +29,7 @@ function GenerateKeyForName(name){
     }
     encName += (EndBytes[Math.floor(Math.random() * EndBytes.length)]).toString();
     writtenBytes++;
-    console.log("Encoded name as: " + encName);
+//    console.log("Encoded name as: " + encName);
     
     var fullNameStr = encName;
     

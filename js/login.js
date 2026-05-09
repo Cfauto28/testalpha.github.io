@@ -12,5 +12,9 @@ document.getElementById("loginspace").appendChild(jslogin);
 var jslogin2 = document.createElement('div');
 jslogin2.className = "login2";
 jslogin2.innerHTML = "Unable to initialize login prompt.<br>Check if your browser supports NPAPI or ActiveX <br>Also try refreshing the page.";
+//jslogin2.innerHTML = "Login successful.<br>Your playtester ID (do not share):<br>" + playtester_id;
 jslogin.appendChild(jslogin2)
 
+//Login successful.
+// Your playtester ID (do not share):
+//[Playtest ID]

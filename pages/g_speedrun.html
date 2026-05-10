@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style_speedrun.css">
+        <link rel="icon" href="../css/dirt.png" sizes="128x128">
+        <title>Extension 16.05</title>
+    </head>
+    <body>
+      <div class="content">
+        <h1>Speedrun leaderboards for FINALE</h1>
+
+        <div class="blink">
+          <a href="g_404.html">Back to level list</a>
+        </div>
+        <br>
+        <br>
+
+        <table id="speedruntable">
+          <thead>
+            <tr>
+              <td>Name/UID</td>
+              <td>Time</td>
+              <td>Download ghost data</td>
+              <td>Actions</td>
+            </tr>
+            </thead>
+            <tbody id="speedrunrowdom">
+            </tbody>
+        </table>
+
+        <template id="speedrunrow">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </template>
+
+        <h2>Submit demo:</h2>
+        <br>
+        <div>
+          <input type="checkbox" id="showusername" checked />
+          <label for="showusername">Show my username on the leaderboards</label>
+        </div>
+        <input type="text" id="filepath" name="filepath" readonly size="15"/><button>Select</button><button>Submit</button>
+
+        <div class="recruitment">
+          To save a demo, complete the level and use the "frrn_savedemo" console command. The demo will be saved to the installation directory. Demos are automatically verified for legitimacy by our system. Please allow up to 24 hours before your score can appear on the leaderboards.
+        </div>
+
+        <div class="footer">
+			revision1
+        </div>
+      </div>
+
+      <script src="../js/leaderboard.js"></script>
+
+    </body>
+</html>
